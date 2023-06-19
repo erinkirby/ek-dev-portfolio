@@ -628,15 +628,6 @@ body.dark-theme {
     margin-bottom: .75rem;
 }
 
-/* .qualification_img {
-    width: 150px;
-    position: absolute;
-    right: -3rem;
-    bottom: 12rem;
-    transform: rotate(15deg);
-    opacity: .1;
-} */
-
 /* reviews */
 .review {
     position: relative;
@@ -1234,28 +1225,38 @@ body.dark-theme {
     }
 
     .projects_container{
-        width: 900px;
+        width: 600px;
+        display: flex;
+    }
+    .swiper-slide{
+        justify-content: center;
+        align-items: center;
     }
 
     .projects_container .swiper-button-prev,
     .projects_container .swiper-button-next{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .projects_button .swiper-button-prev{
-        left: -1rem;
+        left: calc(50% - 5rem);
     }
 
     .projects_button .swiper-button-next{
-        right: -1rem;
+        right: calc(50% - 5rem);
     }
 
     .projects_container .swiper-slide{
-        margin-bottom: 6.5rem;
+        margin-bottom: 6rem;
     }
 
     .projects_img{
         width: 320px;
+        margin-bottom: 2rem;
+    }
+
+    .projects_subtitle{
+        font-size: var(--h2-font-size);
         margin-bottom: 2rem;
     }
 
