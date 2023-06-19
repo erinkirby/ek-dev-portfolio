@@ -27,10 +27,9 @@ const linkAction = () => {
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
 // swiper projects //
-
 let swiperProjects = new Swiper(".projects_container", {
+
     loop: true,
-    spaceBetween: 24,
     
     navigation: {
         nextEl: ".swiper-button-next",
@@ -39,12 +38,7 @@ let swiperProjects = new Swiper(".projects_container", {
     pagination: {
         el: ".swiper-pagination",
     },
-    breakpoints: {
-        1200: {
-            slidesPerView: 2,
-            spaceBetween: -56,
-        }
-    },
+
     mousewheel: true,
     keyboard: true,
 });
@@ -104,12 +98,14 @@ const scrollActive = () => {
         const sectionId = current.getAttribute('id');
         const sectionClass = document.querySelector('.nav_menu a[href*=' + sectionId + ']');
 
+        if (sectionClass) {
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             sectionClass.classList.add('active-link');
         } else {
             sectionClass.classList.remove('active-link');
         }
-        
+    }
     })
 }
 
